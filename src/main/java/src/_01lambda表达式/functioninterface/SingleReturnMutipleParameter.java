@@ -5,5 +5,5 @@ package src._01lambda表达式.functioninterface;
  */
 @FunctionalInterface
 public interface SingleReturnMutipleParameter {
-    int test4(int a, int b);
+    int test6(int a, int b);
 }
