@@ -1,6 +1,7 @@
 package src._04stream;
 
 import java.util.Arrays;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class MapStreamDemo {
@@ -18,6 +19,10 @@ public class MapStreamDemo {
         /**
          * flatMap：扁平化映射，将流中的容器中的元素直接取出，直接存放在流中。
          * */
-        stream.map(e -> e.split("")).flatMap(Arrays::stream).forEach(System.out::println);
+        stream.map(e -> e.split(""))
+                .flatMap(Arrays::stream)
+                .distinct()
+                .collect(Collectors.toList())
+                .forEach(System.out::println);
     }
 }

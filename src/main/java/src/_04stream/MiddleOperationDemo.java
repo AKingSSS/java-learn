@@ -23,13 +23,12 @@ public class MiddleOperationDemo {
 
         // limit
         list.stream().limit(2).forEach(System.out::println);
-        System.out.println("========================================================================");
 
         // skip
         list.stream().skip(2).forEach(System.out::println);
-        System.out.println("========================================================================");
+
+        // skip & limit
         list.stream().skip(2).limit(3).forEach(System.out::println);
-        System.out.println("========================================================================");
 
     }
 }
